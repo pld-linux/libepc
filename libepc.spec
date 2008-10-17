@@ -1,11 +1,11 @@
 Summary:	Easy Publish and Consume library
 Name:		libepc
-Version:	0.3.5
+Version:	0.3.6
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libepc/0.3/%{name}-%{version}.tar.bz2
-# Source0-md5:	83c931954c7428e57b2bdf8f36ecb0d0
+# Source0-md5:	35cc0451466a3dd655531dc926d98a3f
 URL:		http://live.gnome.org/libepc
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -14,7 +14,9 @@ BuildRequires:	avahi-ui-devel
 BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel >= 1:2.16.0
 BuildRequires:	gnome-common >= 2.20.0
+BuildRequires:	gnutls-devel
 BuildRequires:	gtk+2-devel >= 2:2.12.8
+BuildRequires:	gtk-doc >= 1.4
 BuildRequires:	intltool >= 0.36.0
 BuildRequires:	libsoup-devel >= 2.4.0
 BuildRequires:	libtool
@@ -130,7 +132,7 @@ libepc - przykładowe programy.
 	--enable-gtk-doc \
 	--with-html-dir=%{_gtkdocdir}
 
-%{__make} -j1
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
