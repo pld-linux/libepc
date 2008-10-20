@@ -1,11 +1,11 @@
 Summary:	Easy Publish and Consume library
 Name:		libepc
-Version:	0.3.6
+Version:	0.3.7
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libepc/0.3/%{name}-%{version}.tar.bz2
-# Source0-md5:	35cc0451466a3dd655531dc926d98a3f
+# Source0-md5:	dd289fdb08fa1838a15895d07cbac936
 URL:		http://live.gnome.org/libepc
 BuildRequires:	autoconf
 BuildRequires:	automake
