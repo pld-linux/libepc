@@ -1,7 +1,7 @@
 Summary:	Easy Publish and Consume library
 Name:		libepc
 Version:	0.3.11
-Release:	2
+Release:	3
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libepc/0.3/%{name}-%{version}.tar.bz2
@@ -146,6 +146,8 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 cp examples/*.c $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
+
 %find_lang %{name}
 
 %clean
@@ -163,7 +165,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libepc-1.0.so
-%{_libdir}/libepc-1.0.la
 %{_includedir}/libepc-1.0
 %{_pkgconfigdir}/libepc-1.0.pc
 
@@ -179,7 +180,6 @@ rm -rf $RPM_BUILD_ROOT
 %files ui-devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libepc-ui-1.0.so
-%{_libdir}/libepc-ui-1.0.la
 %{_includedir}/libepc-ui-1.0
 %{_pkgconfigdir}/libepc-ui-1.0.pc
 
