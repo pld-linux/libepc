@@ -1,16 +1,16 @@
 Summary:	Easy Publish and Consume library
 Name:		libepc
-Version:	0.3.11
-Release:	3
+Version:	0.4.0
+Release:	1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/libepc/0.3/%{name}-%{version}.tar.bz2
-# Source0-md5:	b0d63bf93c28a17ed84edd0eacc9781a
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/libepc/0.4/%{name}-%{version}.tar.bz2
+# Source0-md5:	c7fde118546d09d747af7b08cb52bfad
 URL:		http://live.gnome.org/libepc
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.10.3
 BuildRequires:	avahi-glib-devel
-BuildRequires:	avahi-ui-devel
+BuildRequires:	avahi-ui-gtk3-devel
 BuildRequires:	docbook-dtd412-xml
 BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel >= 1:2.16.0
@@ -160,7 +160,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_libdir}/libepc-1.0.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libepc-1.0.so.2
+%attr(755,root,root) %ghost %{_libdir}/libepc-1.0.so.3
 
 %files devel
 %defattr(644,root,root,755)
@@ -175,7 +175,7 @@ rm -rf $RPM_BUILD_ROOT
 %files ui
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libepc-ui-1.0.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libepc-ui-1.0.so.2
+%attr(755,root,root) %ghost %{_libdir}/libepc-ui-1.0.so.3
 
 %files ui-devel
 %defattr(644,root,root,755)
