@@ -1,28 +1,31 @@
 Summary:	Easy Publish and Consume library
 Name:		libepc
-Version:	0.4.0
-Release:	2
+Version:	0.4.1
+Release:	1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/libepc/0.4/%{name}-%{version}.tar.bz2
-# Source0-md5:	c7fde118546d09d747af7b08cb52bfad
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/libepc/0.4/%{name}-%{version}.tar.xz
+# Source0-md5:	6854ad8d6dd94070f56b033329a320ac
 URL:		http://live.gnome.org/libepc
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.10.3
-BuildRequires:	avahi-glib-devel
-BuildRequires:	avahi-ui-gtk3-devel
+BuildRequires:	avahi-devel >= 0.6
+BuildRequires:	avahi-glib-devel >= 0.6
+BuildRequires:	avahi-ui-gtk3-devel >= 0.6
 BuildRequires:	docbook-dtd412-xml
 BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel >= 1:2.16.0
 BuildRequires:	gnome-common >= 2.20.0
-BuildRequires:	gnutls-devel
-BuildRequires:	gtk+2-devel >= 2:2.12.8
+BuildRequires:	gnutls-devel >= 1.4
+BuildRequires:	gtk+3-devel >= 3.0.0
 BuildRequires:	gtk-doc >= 1.4
 BuildRequires:	intltool >= 0.36.0
 BuildRequires:	libsoup-devel >= 2.4.0
 BuildRequires:	libtool >= 2:2.2.6
 BuildRequires:	libuuid-devel >= 1.36
 BuildRequires:	pkgconfig >= 1:0.14
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -40,7 +43,7 @@ Summary:	Header files for libepc library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libepc
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	avahi-glib-devel
+Requires:	avahi-glib-devel >= 0.6
 Requires:	libsoup-devel >= 2.4.0
 
 %description devel
