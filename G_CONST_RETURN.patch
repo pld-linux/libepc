@@ -1,0 +1,51 @@
+From e3e1141ed96f3d377bdd902225865cce16526bfd Mon Sep 17 00:00:00 2001
+From: Ionut Biru <ibiru@archlinux.org>
+Date: Fri, 30 Sep 2011 10:57:14 +0000
+Subject: Avoid use of deprecated G_CONST_RETURN
+
+  * libepc/enums.c.in: Avoid use of deprecated G_CONST_RETURN.
+  Bug #660558
+---
+diff --git a/ChangeLog b/ChangeLog
+index a7d235d..857feb2 100644
+--- a/ChangeLog
++++ b/ChangeLog
+@@ -1,3 +1,10 @@
++2011-08-31  Ionut Biru <ibiru@archlinux.org>
++
++  Avoid use of deprecated G_CONST_RETURN
++    
++  * libepc/enums.c.in: Avoid use of deprecated G_CONST_RETURN.
++  Bug #660558
++
+ 	=== Release 0.4.1 ===
+ 	
+ 2011-08-31  Murray Cumming  <murrayc@murrayc.com>
+diff --git a/libepc/enums.c.in b/libepc/enums.c.in
+index 75f737c..bc81b84 100644
+--- a/libepc/enums.c.in
++++ b/libepc/enums.c.in
+@@ -65,7 +65,7 @@ G@Type@Class*
+  *
+  * Returns: The string representation of @value, or %NULL.
+  */
+-G_CONST_RETURN gchar*
++const gchar*
+ @enum_name@_to_string (@EnumName@ value)
+ {
+   const G@Type@Value *@type@_value = g_@type@_get_value (@enum_name@_get_class (), value);
+diff --git a/libepc/enums.h.in b/libepc/enums.h.in
+index fea8b07..48973e5 100644
+--- a/libepc/enums.h.in
++++ b/libepc/enums.h.in
+@@ -19,7 +19,7 @@ G_BEGIN_DECLS
+ 
+ GType                 @enum_name@_get_type  (void) G_GNUC_CONST;
+ G@Type@Class*           @enum_name@_get_class (void) G_GNUC_CONST;
+-G_CONST_RETURN gchar* @enum_name@_to_string (@EnumName@ value) G_GNUC_PURE;
++const gchar* @enum_name@_to_string (@EnumName@ value) G_GNUC_PURE;
+ /*** END value-header ***/
+ 
+ /*** BEGIN file-tail ***/
+--
+cgit v0.9.0.2
