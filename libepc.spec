@@ -1,12 +1,11 @@
 Summary:	Easy Publish and Consume library
 Name:		libepc
-Version:	0.4.1
-Release:	2
+Version:	0.4.2
+Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libepc/0.4/%{name}-%{version}.tar.xz
-# Source0-md5:	6854ad8d6dd94070f56b033329a320ac
-Patch0:		G_CONST_RETURN.patch
+# Source0-md5:	31084fb7bea519afdbf1a25b4b560ad7
 URL:		http://live.gnome.org/libepc
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.10.3
@@ -125,7 +124,6 @@ libepc - przykładowe programy.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__gtkdocize}
