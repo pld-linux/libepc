@@ -1,11 +1,11 @@
 Summary:	Easy Publish and Consume library
 Name:		libepc
-Version:	0.4.3
+Version:	0.4.4
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libepc/0.4/%{name}-%{version}.tar.xz
-# Source0-md5:	90d1f4c51f6f24dcd29092556a5d2ed8
+# Source0-md5:	25c982b719af6533955a1190408e15af
 URL:		http://live.gnome.org/libepc
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.10.3
@@ -44,6 +44,7 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libepc
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	avahi-glib-devel >= 0.6
+Requires:	gnutls-devel >= 1.4
 Requires:	libsoup-devel >= 2.4.0
 
 %description devel
