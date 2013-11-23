@@ -1,4 +1,5 @@
 Summary:	Easy Publish and Consume library
+Summary(pl.UTF-8):	Biblioteka do łatwego publikowania i konsumpcji informacji
 Name:		libepc
 Version:	0.4.4
 Release:	1
@@ -26,6 +27,10 @@ BuildRequires:	libuuid-devel >= 1.36
 BuildRequires:	pkgconfig >= 1:0.14
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
+Requires:	avahi-glib >= 0.6
+Requires:	glib2 >= 1:2.16.0
+Requires:	gnutls >= 1.4
+Requires:	libuuid >= 1.36
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -38,12 +43,23 @@ The Easy Publish and Consume library provides an easy method to:
 This library can be used as key/value store published to the network,
 using encryption, authentication and service discovery.
 
+%description -l pl.UTF-8
+Biblioteka EPC (Easy Publish and Consume) zapewnia prosty sposób:
+- publikowania danych przy użyciu HTTPS
+- ogłaszania tych informacji poprzez DNS-SD
+- odnalezienia tych informacji
+- i wreszcie - ich konsumpcji
+
+Biblioteki można używać jako bazy klucz-wartość opublikowanej w sieci
+z użyciem szyfrowania, uwierzytelniania i wykrywania usług.
+
 %package devel
 Summary:	Header files for libepc library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libepc
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	avahi-glib-devel >= 0.6
+Requires:	glib2-devel >= 1:2.16.0
 Requires:	gnutls-devel >= 1.4
 Requires:	libsoup-devel >= 2.4.0
 
@@ -67,11 +83,15 @@ Statyczna biblioteka libepc.
 
 %package ui
 Summary:	Widgets for libepc
+Summary(pl.UTF-8):	Widgety dla libepc
 Group:		X11/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description ui
 Widgets for use with libepc.
+
+%description ui -l pl.UTF-8
+Biblioteka widgetów przeznaczona do używania z libepc.
 
 %package ui-devel
 Summary:	Header files for libepc-ui library
@@ -79,7 +99,7 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libepc-ui
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Requires:	%{name}-ui = %{version}-%{release}
-Requires:	gtk+2-devel >= 2:2.12.8
+Requires:	gtk+3-devel >= 3.0
 
 %description ui-devel
 Header files for libepc-ui library.
