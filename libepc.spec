@@ -2,7 +2,7 @@ Summary:	Easy Publish and Consume library
 Summary(pl.UTF-8):	Biblioteka do łatwego publikowania i konsumpcji informacji
 Name:		libepc
 Version:	0.4.4
-Release:	1
+Release:	2
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libepc/0.4/%{name}-%{version}.tar.xz
