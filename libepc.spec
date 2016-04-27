@@ -2,7 +2,7 @@ Summary:	Easy Publish and Consume library
 Summary(pl.UTF-8):	Biblioteka do łatwego publikowania i konsumpcji informacji
 Name:		libepc
 Version:	0.4.4
-Release:	2
+Release:	3
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libepc/0.4/%{name}-%{version}.tar.xz
@@ -124,6 +124,9 @@ Summary:	libepc library API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki libepc
 Group:		Documentation
 Requires:	gtk-doc-common
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description apidocs
 libepc library API documentation.
@@ -136,6 +139,9 @@ Summary:	libepc - example programs
 Summary(pl.UTF-8):	libepc - przykładowe programy
 License:	Public Domain
 Group:		Development/Libraries
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description examples
 libepc - example programs.
