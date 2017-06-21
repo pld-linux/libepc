@@ -1,12 +1,12 @@
 Summary:	Easy Publish and Consume library
 Summary(pl.UTF-8):	Biblioteka do łatwego publikowania i konsumpcji informacji
 Name:		libepc
-Version:	0.4.4
-Release:	4
+Version:	0.4.6
+Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libepc/0.4/%{name}-%{version}.tar.xz
-# Source0-md5:	25c982b719af6533955a1190408e15af
+# Source0-md5:	c2bd6801fe0b6a387337d2d2809ba14d
 URL:		http://live.gnome.org/libepc
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.10.3
